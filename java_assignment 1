@@ -1,0 +1,194 @@
+1.Perimeter of rectangleclass problem1 {
+ public static void main(String[] args) {
+ int l = 5;
+ int b = 7;
+
+ int Perimeter = 2*(l+b);
+ int Area = l*b;
+ System.out.println("Perimeter = " + Perimeter + "\n" + "Area = " + Area);
+ }
+}
+----------------------------------------------------------------------------------------------------------
+2.Perimeter of Triangleclass problem2 {
+ public static void main(String[] args) {
+ int side1 = 2;
+ int side2 = 3;
+ int side3 = 5;
+ int Perimeter = side1 + side2 + side3;
+ System.out.println("Perimeter = " + Perimeter);
+ }
+}
+------------------------------------------------------------------------------------------------------------------------
+3.Write a program to add 8 to the number 2345 and then divide it by 3. Now, the modulus of the quotient
+is taken with 5 and then multiply the resultant value by 5. Display the final result.
+class Problem3 {
+ public static void main(String[] args) {
+ int a = 2345;
+ int b = (a+8)/3;
+ int c = (b%5)*5;
+ System.out.println("Result is " + c);
+ }
+}
+------------------------------------------------------------------------------------------------------------
+4.solve the above question using assignment operators (eg. +=, -=, *=).
+class Problem4 {
+ public static void main(String[] args) {
+ int a = 2345;
+ a += 8;
+ a /= 3;
+ a %= 5;
+ a *= 5;
+ System.out.println("Result is " + a);
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+5.check if the two numbers 23 and 45 are equal.
+class Problem5 {
+ public static void main(String[] args) {
+ int a = 23;
+ int b = 45;
+
+ if (a == b)
+ System.out.println("equal");
+ else
+ System.out.println("Not equal");
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+6.print the power of 7 raised to 5.
+class Problem6 {
+ public static void main(String[] args) {
+ double a = Math.pow(7, 5);
+ System.out.println("Result is " + a);
+
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+7.Assign values of variables 'a' and 'b' as 55 and 70 respectively and then check if both the conditions 'a <
+50' and 'a < b' are true.
+class Problem7 {
+ public static void main(String[] args) {
+ int a = 55;
+ int b = 70;
+
+ if (a < 50 && a < b)
+ System.out.println("Condition is True");
+ else
+ System.out.println("Condition is False");
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+8.check if atleast one of the conditions 'a < 50' or 'a < b' is true.
+class Problem8 {
+ public static void main(String[] args) {
+ int a = 55;
+ int b = 70;
+
+ if (a < 50 || a < b)
+ System.out.println("Condition is True");
+ else
+ System.out.println("Condition is False");
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+9.If the marks of Robert in three subjects are 78,45 and 62 respectively (each out of 100 ), write a program
+to calculate his total marks and percentage marks.
+import java.text.DecimalFormat;
+class Problem9 {
+ static DecimalFormat df = new DecimalFormat("0.00");
+ public static void main(String[] args) {
+ int sub1 = 78;
+ int sub2 = 45;
+ int sub3 = 62;
+ double total = sub1 + sub2 + sub3;
+ double percentage = (total/300)*100;
+ System.out.println("Total marks = " + (int) total);
+ System.out.println("Percentage = " + df.format(percentage));
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+10.program by using a third variable
+class Problem10 {
+ public static void main(String[] args) {
+ int a, b, c;
+ a = 6;
+ b = 8;
+ c = a;
+ a = b;
+ b = c;
+ System.out.println(a);
+ System.out.println(b);
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+11.convert Fahrenheit into Celsius.
+import java.util.Scanner;
+class Problem11 {
+ public static void main(String args[]) {
+ float Fahrenheit, Celsius;
+ System.out.print("Enter Temperature in Fahrenheit : ");
+ Scanner sc = new Scanner(System.in);
+ Fahrenheit = sc.nextFloat();
+ Celsius = ((Fahrenheit - 32) * 5) / 9;
+ System.out.println("Temperature in Celsius is: " + Celsius);
+ sc.close();
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+12.program to calculate the total number of girls getting grade 'A'.
+public class Problem12 {
+ public static void main(String[] args) {
+ double total, TotalGradeA, gradeAboys, gradeAgirls;
+ total = 90;
+ TotalGradeA = (50/100.0) * total; // 45
+ gradeAboys = 20;
+ gradeAgirls = TotalGradeA - gradeAboys; //20
+ System.out.println("total number of girls getting grade A : " + (int) gradeAgirls);
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+13.calculate the sum of the digits of a 3-digit number.
+import java.util.Scanner;
+class Problem13 {
+ public static void main(String args[]) {
+ int num, sum = 0;;
+ System.out.print("Enter a number: ");
+ Scanner sc = new Scanner(System.in);
+ num = sc.nextInt();
+
+ while (num != 0) {
+ sum = sum + num % 10;
+ num = num / 10;
+ }
+ System.out.println("Sum of all digits: " + sum);
+ sc.close();
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+14.reverse a 3-digit number.
+import java.util.Scanner;
+class Problem14 {
+ public static void main(String args[]) {
+ int num;
+ System.out.print("Enter a number: ");
+ Scanner sc = new Scanner(System.in);
+ num = sc.nextInt();
+ int rev_num = 0;
+ while (num > 0) {
+ rev_num = rev_num * 10 + num % 10;
+ num = num / 10;
+ }
+ System.out.println("Reversed number is: " + rev_num);
+ sc.close();
+ }
+}
